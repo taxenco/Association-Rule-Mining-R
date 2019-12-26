@@ -57,10 +57,6 @@ purchased.
 
 <img src="./Pic/transact.png" alt="transactions pre-cleaning"/>
 
-All the variables are categorized as factors but Applicant Income, Loan Amount, Loan Amount
-Term and, Credit History which is integers, and Co-applicant Income which is considered
-numerical. The dependent variable is Loan status, the rest of the attributes are independent.
-
 Note: Find the original data on /Data/Online Retail.csv
 
 # Data cleaning
@@ -69,7 +65,65 @@ In order to process the data in R, the first column had to fix the first column 
 
 <img src="./Pic/postCleaning.png" alt="Data post-cleaning"/>
 
-# Performing classification Random Forest
+# Performing Association Rules
+
+In this section will be performing association rules on the dataset using the Apriori algorithm
+This technique aims to find ‘interesting’[1] relationship within the dataset. In order to detect
+this association rules will perform an analysis with R.
+
+An initial exploration of the data we can see that the most purchased item are Vegetables,
+followed by Poultry, while the least is Bagels.
+
+<img src="./Pic/itemFreq.png" alt="item Frequency"/>
+
+The Apriori algorithm was used to detect association rules. The thresholds were set very low
+in order to have as many rules as possible and have a better picture of the associations.
+
+<img src="./Pic/AprioriStat.png" alt="Apriori statistics"/>
+
+As we can appreciate on the figure above that sets the support and confidence as low as 10% the
+Apriori algorithm returns 1947 rules. Inspecting the top 10 rules, the Apriori returns the associations rules along with its support,
+confidence and lift ordered by lift.
+
+<img src="./Pic/AprioriRules.png" alt="Apriori Rules"/>
+
+In order to be able to inspect the data, the Apriori algorithm has rerun setting the confidence at
+85% to have fewer association rules and to be able to explore best rules and to be able to
+visualize the graphs.
+
+An interesting graph that shows us the rules distribution is the scatter plot. It maps the relation
+between Confidence and Support.
+
+<img src="./Pic/scatterPlot.png" alt="scatter Plot"/>
+
+The groups of Matrix show the association's rules found order by lifts. The colour of the lift
+bubble represents the interestingness of the rule.
+
+<img src="./Pic/groupMatrix.png" alt="group Matrix"/>
+
+The parallel coordinates [5] allow the visualization the in a high-dimensional geometry and
+analyzing multivariate data.
+
+<img src="./Pic/ParaPlot.png" alt="Association rules parallel coordinates."/>
+
+The association's rules parameters matrix shows an overview of the relationship among all the
+parameters such as Support, Confidence lift and count.
+
+<img src="./Pic/RulesMatrix.png" alt="Rules Matrix."/>
+
+Another exciting feature that R uses for Data exploration is the rule Explorer () function.
+
+<img src="./Pic/DataExplor.png" alt="Data Exploration."/>
+
+# Conclusion
+The association rules are one of the most advanced techniques to find associations among items
+in a dataset. Parameters such as confidence, support and lift assess the rules very well and may 
+find out newness and actionability on the rules observed. 
+
+However, even though Association Rules are a great tool to search for insight into a database. It needs from an
+expert to find interestingness on the associations since the parameters are suitable for filtering
+but need a quality assessment that only a human can do.
+
 
 # Refences
 
