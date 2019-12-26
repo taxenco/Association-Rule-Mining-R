@@ -67,7 +67,7 @@ Note: Find the original data on /Data/Online Retail.csv
 
 In order to process the data in R, the first column had to fix the first column to separate the date from the item.
 
-<img src="./Pics/postCleaning.png" alt="Data post-cleaning"/>
+<img src="./Pic/postCleaning.png" alt="Data post-cleaning"/>
 
 # Performing classification Random Forest
 
