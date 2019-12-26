@@ -55,7 +55,7 @@ The data selected is a supermarket basket. The dataset used was found on:
 The dataset is made of 1499 rows and 35 columns. The rows are the transaction, and the columns correspond to the items
 purchased.
 
-<img src="./Pic/transac.png" alt="transactions pre-cleaning"/>
+<img src="./Pic/transact.png" alt="transactions pre-cleaning"/>
 
 All the variables are categorized as factors but Applicant Income, Loan Amount, Loan Amount
 Term and, Credit History which is integers, and Co-applicant Income which is considered
