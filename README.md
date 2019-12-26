@@ -26,7 +26,7 @@ This project will implement a Association Rules on a supermarket dataset to find
 Association rules [1] are the result of searching data for patterns using metrics such as support,
 confidence and lift to detect the most important relationships.
 
-<img src="./Pic/assRules.png" alt="Association Rules"/>
+<img src="./Pic/AssRules.png" alt="Association Rules"/>
 
 The association rules can show Novel and actionable associations. The interestingness of an
 association is measured by Support, Confidence and lift. A significant confidence and support
